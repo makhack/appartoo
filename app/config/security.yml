@@ -14,11 +14,12 @@ security:
             security: false
 
         main:
-            anonymous: ~
-            # activate different ways to authenticate
-
-            # http_basic: ~
-            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
-
-            # form_login: ~
-            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+            context:             user
+            form_login:
+                provider:       fos_userbundle
+                login_path:     app_bundle_profile_show
+                default_target_path: app_bundle_profile_show
+            logout:
+                path: fos_user_security_logout
+                target: app_bundle_home_index
+            anonymous:          true

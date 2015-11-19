@@ -1,0 +1,8 @@
+app_bundle_home:
+    resource: "@AppBundle/Resources/config/home/routing.yml"
+    prefix:   /home
+    
+app_bundle_profile:
+    resource: "@AppBundle/Resources/config/profile/routing.yml"
+    prefix:   /profile
+    
