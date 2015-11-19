@@ -1,0 +1,15 @@
+app_bundle_profile_edit:
+    path: /edit/{id}
+    defaults: { _controller: AppBundle:Profile:edit }
+    
+app_bundle_profile_delete:
+    path: /delete/{id}
+    defaults: { _controller: AppBundle:Profile:delete }
+    
+app_bundle_profile_add:
+    path: /add/{id}
+    defaults: { _controller: AppBundle:Profile:add }
+    
+app_bundle_profile_show:
+    path: /show
+    defaults: { _controller: AppBundle:Profile:show }
