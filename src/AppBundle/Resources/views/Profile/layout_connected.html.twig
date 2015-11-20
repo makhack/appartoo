@@ -1,0 +1,36 @@
+{% extends '::base.html.twig' %}
+
+{% block nav %}
+<div class="row">
+	<div class="col-lg-12">
+		<nav class="navbar navbar-default" role="navigation">
+	  	<!-- Brand and toggle get grouped for better mobile display -->
+	  	<div class="navbar-header">
+	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	      		<span class="sr-only">Toggle navigation</span>
+	      		<span class="icon-bar"></span>
+	      		<span class="icon-bar"></span>
+	      		<span class="icon-bar"></span>
+	    	</button>
+	    	<a class="navbar-brand" href="{{ path('app_bundle_profile_show') }}">{% block navTitle %}Appartoo{% endblock %} </a>
+	  	</div>
+		
+	  	<!-- Collect the nav links, forms, and other content for toggling -->
+		 
+	  	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    	<ul class="nav navbar-nav">
+                    <li><a href="{{ path('app_bundle_profile_edit',{"id":app.user.id}) }}">Edition de mon profile</a></li>
+                    <li><a href="{{ path('app_bundle_profile_all') }}">Voir la communauté </a></li>
+                    <li><a href="{{ path('app_bundle_profile_show_friends',{"id":app.user.id}) }}">Voir mes amis</a></li>
+	    	</ul>
+	  	</div><!-- /.navbar-collapse -->
+		</nav>
+	</div>
+</div>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

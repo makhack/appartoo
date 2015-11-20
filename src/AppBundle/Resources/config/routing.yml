@@ -5,4 +5,7 @@ app_bundle_home:
 app_bundle_profile:
     resource: "@AppBundle/Resources/config/profile/routing.yml"
     prefix:   /profile
-    
+
+app_bundle_other_profile:
+    resource: "@AppBundle/Resources/config/otherProfile/routing.yml"
+    prefix:   /other_profile

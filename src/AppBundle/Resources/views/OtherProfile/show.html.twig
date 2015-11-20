@@ -1,0 +1,8 @@
+{% extends 'AppBundle:Profile:layout_connected.html.twig' %}
+
+{% block content %}
+    
+    <h1> Profile de {{ user.username}}</h1>
+    <p>{{ user.email}}</p>
+    <a class="btn btn-success" href="{{ path('app_bundle_profile_add',{id:user.id}) }}">Ajouter à mes amis !</a>
+{% endblock %}{# empty Twig template #}
