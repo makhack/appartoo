@@ -1,0 +1,4 @@
+
+app_bundle_home_index:
+    path: /
+    defaults: { _controller: AppBundle:Home:index }

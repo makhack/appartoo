@@ -1,3 +1,20 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+user_bundle:
+    resource : "@UserBundle/Resources/config/routing.yml"
+    
+app_bundle:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+app_bundle_homepage:
+    path:   /
+    defaults: { _controller: AppBundle:Home:index }
+    
+fos_user_registration_confirmed:
+    pattern: /registration/confirmed
+    defaults: { _controller: AppBundle:Profile:show }
+    requirements:
+        _method: GET

@@ -1,0 +1,4 @@
+
+app_bundle_other_profile_show:
+    path: /show/{id}
+    defaults: { _controller: AppBundle:OtherProfile:show }
