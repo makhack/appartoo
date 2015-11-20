@@ -1,0 +1,24 @@
+{% extends 'AppBundle:Profile:layout_connected.html.twig' %}
+
+{% block content %}
+    <h1>List des utilisateurs :</h1>
+    <br>
+    <table class="table table-bordered">
+        <tr class="active">
+            <td>Username</td>
+            <td>Email</td>
+            <td>Ajouter</td>
+            <td>Detail</td>
+        </tr>
+        {% for u in allUser %}
+            {% if u != app.user %}
+            <tr>
+                <td>{{u.username}}</td>
+                <td>{{u.email}}</td>
+                <td><a class="btn btn-success" href="{{path('app_bundle_profile_add',{"id" : u.id})}}">Add</a></td>
+                <td><a href="{{path('app_bundle_other_profile_show',{"id" : u.id})}}">Voir detail</a></td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+{% endblock %}{# empty Twig template #}
