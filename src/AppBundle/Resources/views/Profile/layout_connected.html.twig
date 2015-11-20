@@ -22,7 +22,8 @@
                     <li><a href="{{ path('app_bundle_profile_edit',{"id":app.user.id}) }}">Edition de mon profile</a></li>
                     <li><a href="{{ path('app_bundle_profile_all') }}">Voir la communauté </a></li>
                     <li><a href="{{ path('app_bundle_profile_show_friends',{"id":app.user.id}) }}">Voir mes amis</a></li>
-	    	</ul>
+                    <li><a href="{{ path('fos_user_security_logout') }}">Deconnection</a></li>
+                </ul>
 	  	</div><!-- /.navbar-collapse -->
 		</nav>
 	</div>
